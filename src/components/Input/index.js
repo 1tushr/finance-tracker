@@ -1,16 +1,23 @@
 import React from "react";
 import "./styles.css";
-export default function Input({ label, state, setState,placeholder,type }) {
+
+const Input = ({ label, state, setState, placeholder, type }) => {
+  const handleChange = (e) => {
+    setState(e.target.value);
+  };
+
   return (
     <div className="input-wrapper">
       <p className="input-label">{label}</p>
       <input
-        // onChange={(e)=>{setState(e.target.value)}}
         type={type}
         placeholder={placeholder}
-         onClick={(e) => (setState( e.target.value))}
+        value={state}
+        onChange={handleChange}
         className="custom-input"
-      ></input>
+      />
     </div>
   );
-}
+};
+
+export default Input;
