@@ -129,6 +129,7 @@ export default function SignupSignin() {
           setLoading(false)
           const errorCode = error.code;
           const errorMessage = error.message;
+          console.log(errorMessage);
           toast.error("user not authenticated!");
         });
     } catch (e) {
