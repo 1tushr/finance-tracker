@@ -1,0 +1,46 @@
+/* styles.css */
+/* Styles for the Row component */
+ .card-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+   
+  /* Styles for the Card component */
+  .ant-card-head-title {
+    font-size:x-large;
+  }
+  .custom-card {
+    width: 25rem;
+    margin: 13px;
+    padding: 0px;
+    border: 1px solid #ccc;
+    height: 14rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styles for the Button component */
+  .reset-button {
+    padding: 10px 20px;
+    background-color: #1890ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .reset-button:hover {
+    background-color: #40a9ff;
+  }
+  
+  .reset-button:focus {
+    outline: none;
+  }
+  
+  /* Additional styles for the paragraph inside the card */
+  .balance-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
