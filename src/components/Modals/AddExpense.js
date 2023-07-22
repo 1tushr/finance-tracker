@@ -9,6 +9,7 @@ import {
   Input,
   DatePicker,
   Select,
+  Space,
 } from "antd";
 function AddExpenseModal({
   isExpenseModalVisible,
@@ -63,8 +64,12 @@ function AddExpenseModal({
             { required: true, message: "Please select the expense date!" },
           ]}
         >
-          <DatePicker className="custom-input" format="YYYY-MM-DD" />
-        </Form.Item>
+       <Space direction="vertical" style={{ width: "100%" }}>
+            <DatePicker className="custom-input" format="YYYY-MM-DD" />
+          </Space>
+   
+          
+            </Form.Item>
         <Form.Item
           label="Tag"
           name="tag"
