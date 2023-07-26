@@ -1,0 +1,53 @@
+.text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-filter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    
+}
+
+.input{
+    width:49rem;
+    height: 2rem;
+    padding: 0rem 2rem;
+    margin-left: 4rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    
+}
+
+.input:focus{
+    outline: none;
+}
+
+.table-flex{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    /* gap: 2rem; */
+     align-items:baseline; 
+    justify-content:space-around; 
+}
+
+.select-input{
+margin-right: 4rem;
+width: 25rem;
+display: flex;
+align-items: center;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-content{
+    margin: 1rem 5rem;
+}
+
+/* class for button csv  */
+.width{
+    width: 10rem;
+}

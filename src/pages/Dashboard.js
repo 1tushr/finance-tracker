@@ -9,6 +9,8 @@ import { addDoc, collection, doc, getDoc, getDocs, query } from "firebase/firest
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../firebase";
 import { toast } from "react-toastify";
+import Table from "../components/Table";
+import TransactionTable from "../components/Table";
 export default function Dashboard() {
   const [transaction,setTransaction]=useState([]);
   const [user] = useAuthState(auth);
@@ -126,6 +128,8 @@ setTotalBalance(incomeTotal-expenseTotal);
         handleExpenseCancel={handleExpenseCancel}
         onFinish={onFinish}
       ></AddExpenseModal>
+      
+      <TransactionTable transaction={transaction}></TransactionTable>
     </>
   );
 }

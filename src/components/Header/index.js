@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import {auth} from "../../firebase"
 import './styles.css';
+import userImg from"../../assets/user.svg"
 import { useNavigate } from 'react-router-dom';
 import { getAuth, signOut } from 'firebase/auth';
 
@@ -37,8 +38,15 @@ const logoutFunc=()=>{
    <>
    <div className='navbar'>
     <p className='logo'>FundWise.</p>
-    {user&& <p className='logo link'onClick={logoutFunc}>Logout</p>
-}
+    {user&& 
+  (
+<div style={{display:"flex",alignItems:"centre",justifyContent:"centre",gap:"0.75rem"}}>
+  <img src={user.photoURL?user.photoURL:userImg} style={{ height:"2rem",width:"2rem",borderRadius:"50%"}}></img>
+    <p className='logo link'onClick={logoutFunc}>Logout</p>
+</div>
+  )
+    
+   }
        </div>
    </>
   )
