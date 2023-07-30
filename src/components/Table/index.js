@@ -156,7 +156,7 @@ document.body.removeChild(link);
           dataSource={filteredTransactions}
           columns={columns}
         />
-        ;
+        
       </div>
     </>
   );

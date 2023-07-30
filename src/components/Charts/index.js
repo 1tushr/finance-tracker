@@ -28,14 +28,15 @@ export default function ChartComponent({ sortedTransaction }) {
 
   const config = {
     data: data,
-    width:900,
-    autoFit: false,
+    // width:900,
+    autoFit: true,
     xField: "date",
     yField: "amount",
   };
   const spendingConfig = {
     data: aggregatedSpendingData,
     width:400, // You can adjust this width as needed
+    autoFit:true,
     angleField: "amount",
     colorField: "tag",
   };
@@ -46,17 +47,23 @@ export default function ChartComponent({ sortedTransaction }) {
     <div className="charts-wrapper">
       <div className="chart-wrapper">
         <h2 className="text">your analytics</h2>
+        <div className="line-graph">
         <Line 
           {...config}
           onReady={(chartInstance) => (chart = chartInstance)}
         />
+        </div>
+       
       </div>
       <div className="spending">
         <h2 className="text">your spending</h2>
+        <div className="pie">
         <Pie
           {...spendingConfig}
           onReady={(chartInstance) => (pieChart = chartInstance)}
         />
+        </div>
+      
       </div>
     </div>
   );

@@ -27,3 +27,8 @@
   opacity: 1;
   transition: all 0.3s;
 }
+@media(max-width:600px){
+  .navbar{
+    width: 23rem;
+  }
+}
